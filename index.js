@@ -8,6 +8,7 @@ const PORT = 3000
 app.use(express.json())
 
 app.get('/', (req, res) => {
+  console.log('testing', theway)
   res.send('Hello from Express backend!', theway)
 })
 
