@@ -10,6 +10,8 @@ import os from 'os'
 const streamPipeline = promisify(pipeline)
 let saveDir
 
+export const theway = path.join(os.homedir(), 'Downloads', 'images_downloaded')
+
 // Directory to save images
 export function createImageFolder() {
   // Current project dir
