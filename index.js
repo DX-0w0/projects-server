@@ -10,14 +10,13 @@ app.get('/', (req, res) => {
   res.send('Hello from Express backend!')
 })
 
-app.post('/images', (req, res) => {
-  const { url, totalImage } = req.body
-  res.send('Hello from Express backend! 2')
+app.get('/foods', (req, res) => {
+  res.json({ message: 'hello' })
 })
 
-app.get('/listings', (req, res) => {
-  const { url } = req.body
-  res.json({ message: 'hello' })
+app.post('/hello', (req, res) => {
+  const data = req.body
+  res.json({ message: 'Hello, POST request received!', data })
 })
 
 // Start server
