@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/foods', (req, res) => {
-  res.json({ message: 'hello' })
+  res.json({ message: 'I am so hungry for food' })
 })
 
 app.post('/hello', (req, res) => {
