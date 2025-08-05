@@ -1,1 +1,1 @@
-# image-extension-server
+# projects server

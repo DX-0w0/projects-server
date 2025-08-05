@@ -1,5 +1,4 @@
 const express = require('express')
-const { theway } = require('./downloadImages.mjs')
 
 const app = express()
 const PORT = 3000
@@ -8,16 +7,15 @@ const PORT = 3000
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  console.log('testing', theway)
-  res.send('Hello from Express backend!', theway)
+  res.send('Hello from Express backend!')
 })
 
-app.get('/image-source', (req, res) => {
+app.post('/images', (req, res) => {
   const { url, totalImage } = req.body
   res.send('Hello from Express backend! 2')
 })
 
-app.get('/image-gallery', (req, res) => {
+app.get('/listings', (req, res) => {
   const { url } = req.body
   res.json({ message: 'hello' })
 })
